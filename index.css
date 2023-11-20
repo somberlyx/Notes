@@ -75,6 +75,8 @@ img {
   min-height: 200px;
   outline: none; 
   border-radius: 5px;
+  word-wrap: break-word;
+	overflow-wrap: break-word;
 }
 
 .delete {
