@@ -3,6 +3,14 @@ const createNotes = document.querySelector(".create-new");
 
 let userNotes = document.querySelectorAll(".input-note");
 
+function savedNotes(){
+  notes.innerHTML = localStorage.getItem("note")
+}
+
+function updateNotes(){
+  localStorage.setItem("note", notes.innerHTML)
+}
+
 createNotes.addEventListener("click", ()=>{
   let inputNote = document.createElement("p");
   let deleteIcon = document.createElement("img");
@@ -16,5 +24,15 @@ createNotes.addEventListener("click", ()=>{
 notes.addEventListener("click", function(e){
   if(e.target.tagName === "IMG"){
     e.target.parentElement.remove();
+    updateNotes();
+  } else if (e.target.tagName === "P"){
+    userNotes = document.querySelectorAll(".input-note");
+    userNotes.forEach(note => {
+      note.onkeyup = function(){
+        updateNotes();
+      }
+    })
   }
 })
+
+savedNotes();
