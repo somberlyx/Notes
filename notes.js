@@ -3,10 +3,9 @@ const createNotes = document.querySelector(".create-new");
 
 let userNotes = document.querySelectorAll(".input-note");
 
-let deleteIcon = document.createElement("img");
-
 createNotes.addEventListener("click", ()=>{
   let inputNote = document.createElement("p");
+  let deleteIcon = document.createElement("img");
   inputNote.className = "input-note";
   inputNote.setAttribute("contenteditable", "true");
   deleteIcon.src = "images/delete-svgrepo-com.svg";
