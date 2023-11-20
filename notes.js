@@ -12,3 +12,9 @@ createNotes.addEventListener("click", ()=>{
   deleteIcon.className = "delete";
   notes.appendChild(inputNote).appendChild(deleteIcon);
 })
+
+notes.addEventListener("click", function(e){
+  if(e.target.tagName === "IMG"){
+    e.target.parentElement.remove();
+  }
+})
