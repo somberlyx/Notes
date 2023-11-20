@@ -80,7 +80,7 @@ img {
 .delete {
   position: absolute;
   width: 30px;
-  right: 8px;
-  bottom: 8px;
+  right: 15px;
+  bottom: 15px;
   cursor: pointer;
 }
